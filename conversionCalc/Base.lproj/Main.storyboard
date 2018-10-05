@@ -43,6 +43,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="FromFieldPressed:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="21c-EO-IqU"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suU-IG-6zI" customClass="ConversionCalcLabel" customModule="conversionCalc" customModuleProvider="target">
                                                 <rect key="frame" x="183.5" y="0.0" width="175.5" height="30"/>
@@ -66,6 +69,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="ToFieldPressed:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="xlu-LS-pKi"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-00-0Ol" customClass="ConversionCalcLabel" customModule="conversionCalc" customModuleProvider="target">
                                                 <rect key="frame" x="183.5" y="0.0" width="175.5" height="30"/>

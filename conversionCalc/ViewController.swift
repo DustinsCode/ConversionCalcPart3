@@ -105,6 +105,7 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     //Handling the calculate button.  Searches dictionary based on current mode and
     //unit selections
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        dismissKeyboard()
         
         if mode == .Length{
             if self.fromField.text != "" {
@@ -130,14 +131,27 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
         
     }
     
+    
+   
+    @IBAction func FromFieldPressed(_ sender: ConversionCalcTextField) {
+        self.toField.text? = ""
+    }
+    
+    @IBAction func ToFieldPressed(_ sender: ConversionCalcTextField) {
+        self.fromField.text? = ""
+    }
+    
     //Clears the fields
     @IBAction func clearButtonPressed(_ sender: UIButton) {
+        dismissKeyboard()
         self.fromField.text? = ""
         self.toField.text? = ""
     }
     
     //Switches between volume and length mode
     @IBAction func modeButtonPressed(_ sender: UIButton) {
+        
+        dismissKeyboard()
         if mode == .Length{
             mode = .Volume
             self.titleLabel?.text? = "Volume Conversion Calculator"
