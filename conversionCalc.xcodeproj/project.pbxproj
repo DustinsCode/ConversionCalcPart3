@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBBC7466218773CF003843D9 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC7465218773CF003843D9 /* Conversion.swift */; };
+		FBBC746821877874003843D9 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC746721877874003843D9 /* HistoryTableViewController.swift */; };
 		FBCDEB7F2161EFD000E4DF3F /* ConversionCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCDEB7E2161EFD000E4DF3F /* ConversionCalcLabel.swift */; };
 		FBCDEB812161EFFF00E4DF3F /* ConversionCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCDEB802161EFFF00E4DF3F /* ConversionCalcButton.swift */; };
 		FBCDEB832161F04900E4DF3F /* ConversionCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCDEB822161F04900E4DF3F /* ConversionCalcTextField.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FBBC7465218773CF003843D9 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		FBBC746721877874003843D9 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		FBCDEB7E2161EFD000E4DF3F /* ConversionCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcLabel.swift; sourceTree = "<group>"; };
 		FBCDEB802161EFFF00E4DF3F /* ConversionCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcButton.swift; sourceTree = "<group>"; };
 		FBCDEB822161F04900E4DF3F /* ConversionCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcTextField.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				FBCDEB7E2161EFD000E4DF3F /* ConversionCalcLabel.swift */,
 				FBCDEB802161EFFF00E4DF3F /* ConversionCalcButton.swift */,
 				FBCDEB822161F04900E4DF3F /* ConversionCalcTextField.swift */,
+				FBBC7465218773CF003843D9 /* Conversion.swift */,
+				FBBC746721877874003843D9 /* HistoryTableViewController.swift */,
 			);
 			path = conversionCalc;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 				FBDBC4D42156C80B00E46256 /* DecimalMinusTextField.swift in Sources */,
 				FBCDEB812161EFFF00E4DF3F /* ConversionCalcButton.swift in Sources */,
 				FBCDEB832161F04900E4DF3F /* ConversionCalcTextField.swift in Sources */,
+				FBBC7466218773CF003843D9 /* Conversion.swift in Sources */,
+				FBBC746821877874003843D9 /* HistoryTableViewController.swift in Sources */,
 				FBCDEB7F2161EFD000E4DF3F /* ConversionCalcLabel.swift in Sources */,
 				FBDBC46C215016B500E46256 /* ViewController.swift in Sources */,
 				FBDBC4D821573EE100E46256 /* UnitsAndModes.swift in Sources */,
