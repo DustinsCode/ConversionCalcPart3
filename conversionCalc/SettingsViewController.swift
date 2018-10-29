@@ -54,7 +54,7 @@ class SettingsViewController: UIViewController {
             }
             self.fromLabel.text? = self.fromLength!.rawValue
             self.toLabel.text? = self.toLength!.rawValue
-        }else{
+        }else {
             VolumeUnit.allCases.forEach{
                 pickerData.append($0.rawValue)
             }
@@ -134,7 +134,8 @@ class SettingsViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    /* Action for the save button.  Saves current picker selections and
+    /*
+     *Action for the save button.  Saves current picker selections and
      * informs ViewController
      **/
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -144,10 +145,12 @@ class SettingsViewController: UIViewController {
         if let d = self.delegate {
             if mode == .Length{
                 d.settingsChanged(fromUnits: fromLength!, toUnits: toLength!, fromLengthIndex: self.fromLengthIndex!, toLengthIndex: self.toLengthIndex!  )
-            }else if mode == .Volume{
+            }else{
                 d.settingsChanged(fromUnits: fromVolume!, toUnits: toVolume!, fromVolumeIndex: self.fromVolumeIndex!, toVolumeIndex: self.toVolumeIndex!)
             }
         }
+        _ = self.navigationController?.popViewController(animated: true)
+
     }
     
     /* Cancel button handler.  Cancel button is hooked up to an unwind */

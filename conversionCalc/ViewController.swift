@@ -9,7 +9,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, SettingsViewControllerDelegate {
+class ViewController: UIViewController, SettingsViewControllerDelegate,  HistoryTableViewControllerDelegate{
+    
+    func selectEntry(entry: Conversion) {
+        self.mode = entry.mode
+        self.fromField.text = "\(entry.fromVal)"
+        self.fromLabel.text = entry.fromUnits
+        self.toField.text = "\(entry.toVal)"
+        self.toLabel.text = entry.toUnits
+    }
     
     //Functions for the delegate handling
     func settingsChanged(fromUnits: LengthUnit, toUnits: LengthUnit, fromLengthIndex: Int, toLengthIndex: Int) {
@@ -78,27 +86,27 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     
     //Handles delegates and passing variables between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? UINavigationController {
+        if let dest = segue.destination as? SettingsViewController {
             
             //initializing variables in SettingsViewController
-            if let test = dest.viewControllers[0] as? SettingsViewController {
-                test.delegate = self
-                test.mode = self.mode
-                test.fromLength = self.fromUnitsLength
-                test.toLength = self.toUnitsLength
-                test.fromVolume = self.fromUnitsVolume
-                test.toVolume = self.toUnitsVolume
-                test.fromLengthIndex = self.fromLengthIndex
-                test.toLengthIndex = self.toLengthIndex
-                test.toVolumeIndex = self.toVolumeIndex
-                test.fromVolumeIndex = self.fromVolumeIndex
+            if segue.identifier == "settingsSegue" {
+                dest.delegate = self
+                dest.mode = self.mode
+                dest.fromLength = self.fromUnitsLength
+                dest.toLength = self.toUnitsLength
+                dest.fromVolume = self.fromUnitsVolume
+                dest.toVolume = self.toUnitsVolume
+                dest.fromLengthIndex = self.fromLengthIndex
+                dest.toLengthIndex = self.toLengthIndex
+                dest.toVolumeIndex = self.toVolumeIndex
+                dest.fromVolumeIndex = self.fromVolumeIndex
                 
             }
-            
-            
         }
+        
         if let dest = segue.destination as? HistoryTableViewController {
             if segue.identifier == "historySegue" {
+                dest.historyDelegate = self
                 dest.entries = self.entries
             }
         }
@@ -185,7 +193,7 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     //Handles the cancel button.  It doesn't appear connected, but when i delete this code
     //the cancel and save button no longer work
     @IBAction func cancelButtonPressed(segue: UIStoryboardSegue){
-        
+
     }
     
 }

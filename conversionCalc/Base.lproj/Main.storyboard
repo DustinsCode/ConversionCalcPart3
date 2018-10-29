@@ -131,7 +131,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="YrO-Wa-0gh">
                             <connections>
-                                <segue destination="ycd-a6-IMn" kind="show" identifier="settingsSegue" id="DC8-Wi-uBf"/>
+                                <segue destination="ycd-a6-IMn" kind="show" identifier="settingsSegue" id="iNC-eH-Y7p"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -304,7 +304,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIW-4h-Yvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="881"/>
+            <point key="canvasLocation" x="-207" y="910"/>
         </scene>
     </scenes>
 </document>
