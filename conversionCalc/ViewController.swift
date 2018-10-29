@@ -34,7 +34,8 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     }
     
    
-    
+    //Array of conversion instances
+    var entries : [Conversion] = []
     
     //Tracks mode and current length/volume selections
     var mode = CalculatorMode.Length
@@ -93,8 +94,14 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
                 test.fromVolumeIndex = self.fromVolumeIndex
                 
             }
+            
+            
         }
-
+        if let dest = segue.destination as? HistoryTableViewController {
+            if segue.identifier == "historySegue" {
+                dest.entries = self.entries
+            }
+        }
     }
     
     //Hides the keyboard
@@ -117,6 +124,10 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
                 let conversionVal = lengthConversionTable[key]
                 self.fromField.text = String(Double(self.toField.text!)! * conversionVal!)
             }
+            
+            let conv = Conversion(fromVal: Double(self.fromField.text!)!, toVal: Double(toField.text!)!, mode: mode, fromUnits: fromUnitsLength.rawValue, toUnits: toUnitsLength.rawValue, timestamp: Date())
+            entries.append(conv)
+            
         }else if mode == .Volume {
             if self.fromField.text != "" {
                 let key = VolumeConversionKey(toUnits: toUnitsVolume, fromUnits: fromUnitsVolume)
@@ -127,7 +138,12 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
                 let conversionVal = volumeConversionTable[key]
                 self.fromField.text = String(Double(self.toField.text!)! * conversionVal!)
             }
+            
+            let conv = Conversion(fromVal: Double(self.fromField.text!)!, toVal: Double(toField.text!)!, mode: mode, fromUnits: fromUnitsVolume.rawValue, toUnits: toUnitsVolume.rawValue, timestamp: Date())
+            
+            entries.append(conv)
         }
+        
         
     }
     
