@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB8F06C2218A227400378444 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F06C1218A227400378444 /* HistoryTableViewCell.swift */; };
 		FBBC7466218773CF003843D9 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC7465218773CF003843D9 /* Conversion.swift */; };
 		FBBC746821877874003843D9 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC746721877874003843D9 /* HistoryTableViewController.swift */; };
 		FBCDEB7F2161EFD000E4DF3F /* ConversionCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCDEB7E2161EFD000E4DF3F /* ConversionCalcLabel.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB8F06C1218A227400378444 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		FBBC7465218773CF003843D9 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		FBBC746721877874003843D9 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		FBCDEB7E2161EFD000E4DF3F /* ConversionCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcLabel.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				FBDBC46D215016B500E46256 /* Main.storyboard */,
 				FBDBC4D721573EE100E46256 /* UnitsAndModes.swift */,
 				FBDBC4D521572BB800E46256 /* SettingsViewController.swift */,
+				FB8F06C1218A227400378444 /* HistoryTableViewCell.swift */,
 				FBDBC4D32156C80B00E46256 /* DecimalMinusTextField.swift */,
 				FBDBC470215016B600E46256 /* Assets.xcassets */,
 				FBDBC472215016B600E46256 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 				FBCDEB7F2161EFD000E4DF3F /* ConversionCalcLabel.swift in Sources */,
 				FBDBC46C215016B500E46256 /* ViewController.swift in Sources */,
 				FBDBC4D821573EE100E46256 /* UnitsAndModes.swift in Sources */,
+				FB8F06C2218A227400378444 /* HistoryTableViewCell.swift in Sources */,
 				FBDBC46A215016B500E46256 /* AppDelegate.swift in Sources */,
 				FBDBC4D621572BB800E46256 /* SettingsViewController.swift in Sources */,
 			);

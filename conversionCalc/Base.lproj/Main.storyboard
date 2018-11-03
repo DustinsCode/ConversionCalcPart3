@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -271,29 +272,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellId" textLabel="c2u-89-fgM" detailTextLabel="WN2-rU-jTW" style="IBUITableViewCellStyleSubtitle" id="ulF-15-fdk">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FancyCell" rowHeight="80" id="xdM-sz-c0l" customClass="HistoryTableViewCell" customModule="conversionCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ulF-15-fdk" id="x6h-gP-hLK">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdM-sz-c0l" id="1wK-JR-goq">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2u-89-fgM">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-AJ-Uwl">
+                                            <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="CvV-NC-p75"/>
+                                                <constraint firstAttribute="width" constant="60" id="XfJ-10-HWG"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion Info Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rp-7O-cPu">
+                                            <rect key="frame" x="76" y="11" width="265" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZI-Ye-fEI">
+                                            <rect key="frame" x="76" y="40" width="249" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WN2-rU-jTW">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hoa-AJ-Uwl" firstAttribute="top" secondItem="1wK-JR-goq" secondAttribute="top" constant="8" id="09A-ut-Nm2"/>
+                                        <constraint firstItem="6rp-7O-cPu" firstAttribute="top" secondItem="1wK-JR-goq" secondAttribute="topMargin" id="27B-Ti-Ki7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uZI-Ye-fEI" secondAttribute="trailing" constant="8" id="9nf-cx-Okp"/>
+                                        <constraint firstItem="uZI-Ye-fEI" firstAttribute="top" secondItem="6rp-7O-cPu" secondAttribute="bottom" constant="8" id="PSi-yj-lt6"/>
+                                        <constraint firstItem="6rp-7O-cPu" firstAttribute="trailing" secondItem="1wK-JR-goq" secondAttribute="trailingMargin" constant="8" id="YGx-Uw-9nh"/>
+                                        <constraint firstItem="6rp-7O-cPu" firstAttribute="leading" secondItem="Hoa-AJ-Uwl" secondAttribute="trailing" constant="8" id="Zui-2y-uvF"/>
+                                        <constraint firstItem="uZI-Ye-fEI" firstAttribute="leading" secondItem="Hoa-AJ-Uwl" secondAttribute="trailing" constant="8" id="bGm-vo-Nb0"/>
+                                        <constraint firstItem="Hoa-AJ-Uwl" firstAttribute="leading" secondItem="1wK-JR-goq" secondAttribute="leading" constant="8" id="mEU-3e-sww"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conversionLabel" destination="6rp-7O-cPu" id="BPw-iq-fr4"/>
+                                    <outlet property="thumbnail" destination="Hoa-AJ-Uwl" id="0Cq-Ap-5me"/>
+                                    <outlet property="timestampLabel" destination="uZI-Ye-fEI" id="9jw-RL-ffD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -304,7 +325,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIW-4h-Yvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="910"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="909.89505247376314"/>
         </scene>
     </scenes>
 </document>

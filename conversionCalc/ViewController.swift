@@ -43,7 +43,12 @@ class ViewController: UIViewController, SettingsViewControllerDelegate,  History
     
    
     //Array of conversion instances
-    var entries : [Conversion] = []
+//    var entries : [Conversion] = []
+    var entries : [Conversion] = [
+        Conversion(fromVal: 1, toVal: 1760, mode: .Length, fromUnits: LengthUnit.Miles.rawValue, toUnits:
+            LengthUnit.Yards.rawValue, timestamp: Date.distantPast),
+        Conversion(fromVal: 1, toVal: 4, mode: .Volume, fromUnits: VolumeUnit.Gallons.rawValue, toUnits:
+            VolumeUnit.Quarts.rawValue, timestamp: Date.distantFuture)]
     
     //Tracks mode and current length/volume selections
     var mode = CalculatorMode.Length
@@ -108,6 +113,7 @@ class ViewController: UIViewController, SettingsViewControllerDelegate,  History
             if segue.identifier == "historySegue" {
                 dest.historyDelegate = self
                 dest.entries = self.entries
+                //dest.mode = self.mode
             }
         }
     }
